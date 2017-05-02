@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(13,2,33,1) 0%,rgba(40,75,99,1) 23%,rgba(40,75,99,1) 23%,rgba(231,206,227,1) 65%,rgba(255,180,119,1) 100%);
+  animation: bodyFadeIn 1s linear forwards;
+}
+@keyframes bodyFadeIn {
+  to {opacity: 1}
+}
+
+.slide {
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+/**************************** scene1 ****************************/
+section#scene1 {
+  height: 900px;
+  width: 100%;
+  position: relative;
+}
+#moon {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  width: 200px;
+}
+
+/************** waves **************/
+.wave {
+  position: absolute;
+}
+#wave1 {
+  bottom: 0px;
+  left: 100px;
+  width: 700px;
+}
+#wave6 {
+  bottom: 0px;
+  left: 400px;
+  width: 300px;
+}
+#wave2 {
+  bottom: -200px;
+  left: 500px;
+  width: 650px;
+}
+#wave3 {
+  bottom: -250px;
+  left: 75px;
+  width: 650px;
+}
+#wave4 {
+  bottom: -150px;
+  left: 0px;
+  width: 800px
+}
+#wave5 {
+  bottom: -350px;
+  right: 0px;
+  width: 1100px;
+}
+
+/************** mountain **************/
+.mountain {
+  position: absolute;
+  width: 100%;
+}
+#mountain1 {
+  top: 170px;
+}
+#mountain2 {
+  top: 265px;
+}
+#mountain3 {
+  top: 490px;
+}
+#mountain4 {
+  top: 380px;
+  width: 750px;
+  right: 0;
+}
+
+/**************************** scene2 ****************************/
+#scene2 {
+  height: 1500px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.scene2 {position: absolute}
+#sun {
+  width: 50%;
+  top: 600px;
+  margin: 0 25%;
+  transform: translateY(100px);
+}
+/************** clouds **************/
+#cloud1 {
+  top: 625px;
+  right: 85%;
+  width: 400px;
+}
+#cloud2 {
+  top: 725px;
+  left: 75%;
+  width: 400px;
+}
+#cloud3 {
+  top: 500px;
+  left: 50%;
+  width: 250px;
+}
+/************** mountains **************/
+#mountain5 {
+  top: 850px;
+  transform: translateY(100px);
+}
+#mountain6 { /*lake*/
+  top: 1100px;
+  transform: translateY(75px);
+}
+#mountainreflect, #lake1, #lake2 {
+  top: 1265px;
+}
+
+/************** bamboo **************/
+#bambooright2 {
+  right: 10%;
+  height: 550px;
+  bottom: 50px;
+}
+svg#bambooright1 {
+  right: 7%;
+  height: 700px;
+  bottom: 25px;
+}
+svg#bambooright1:hover #bamboobranch1 {
+  transform-origin: right top;
+  animation: swing1 1.5s linear alternate infinite;
+}
+@keyframes swing1 {
+  to {transform: rotate(-40deg);}
+}
+svg#bambooright1:hover #bamboobranch2 {
+  transform-origin: right bottom;
+  animation: swing2 1.5s linear alternate infinite;
+}
+@keyframes swing2 {
+  to {transform: rotate(40deg);}
+}
+/*biggest right*/
+svg#bambooright1:hover #bamboobranch3 {
+  transform-origin: left top;
+  animation: swing3 1.5s linear alternate infinite;
+}
+@keyframes swing3 {
+  to {transform: rotate(18deg);}
+}
+/*biggest left*/
+svg#bambooright1:hover #bamboobranch4 {
+  transform-origin: right bottom;
+  animation: swing4 1.5s linear alternate infinite;
+}
+@keyframes swing4 {
+  to {transform: rotate(-20deg);}
+}
+
+
+/************** ripples **************/
+.ripple {
+  opacity: 0;
+  width: 100%;
+  bottom: -1%;
+}
+@keyframes ripple {
+  0%{transform: scale(.5, .5)}
+  100%{transform: scale(1, 1); opacity: .8}
+}
+/************** leaf **************/
+#leaf {
+  width: 75px;
+  top: 50%;
+  left: 46.5%;
+  display: none;
+}
+@keyframes leafFall {
+  0% {transform: rotate(-90deg)}
+  15% {transform: translate(-50px, 310px)}
+  25% {transform: translate(100px, 460px) rotate(30deg)}
+  40% {transform: translate(0px, 610px) rotate(-30deg)}
+  45% {transform: translate(0px, 610px) rotate(0deg)}
+  100% {transform: translate(800px, 610px) rotate(0deg)}
+}
