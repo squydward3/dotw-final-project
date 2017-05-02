@@ -5,4 +5,4 @@ Some technologies that I will definitely make use of include the Canvas, Js-cont
 
 Aesthetically, these drawings will be inspired by traditional East Asian landscape paintings and attempt to capture the essence of 花樣年華. 
 
-P.s: I also want to incorporate some sort of audio element in this project that somehow interacts with these drawings and/or response to some user activities.
+[Final version] (http://i6.cims.nyu.edu/~apm417/dotw/hyyh/)
